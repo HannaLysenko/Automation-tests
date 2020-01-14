@@ -85,4 +85,4 @@ describe('Register page', () => {
         element.click();
         browser.pause(2000);
     });
-});
+})
