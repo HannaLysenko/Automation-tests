@@ -8,7 +8,6 @@ describe('Register page', () => {
         browser.url('https://stage.pasv.us/user/register')
     });
     it('should have the right title', () => {
-        //browser.url('https://stage.pasv.us/user/register')
         const actualTitle = browser.getTitle();
         const expectedTitle = 'Progress Monitor';
         expect(actualTitle).equal(expectedTitle);
@@ -96,3 +95,11 @@ describe('login page', () =>{
         browser.pause(5000);
     });
 });
+
+describe('New User Page', () => {
+    it('should have the right title', () => {
+        const actual = $('h1').getText();
+        const expected = 'You are a new user';
+        expect(actual).equal(expected);
+    });
+})
