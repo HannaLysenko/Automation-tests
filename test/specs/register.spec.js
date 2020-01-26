@@ -1,30 +1,31 @@
 const {expect} = require('chai');
 
-const {URL_REGISTER, user, page, pageRegisterSelectors, pageLogin } = require('./register_data');
+const {user, registerPage, pageRegisterSelectors, pageLogin } = require('./register_data');
+const { URL_REGISTER } = require('./login_data');
 
-describe('Register page', () => {
+describe('REGISTER PAGE', () => {
     it('should have a correct title', () => {
         browser.url(URL_REGISTER);
         const actual = browser.getTitle();
-        const expected = page.title;
+        const expected = registerPage.title;
         expect(actual).equal(expected);
     });
 
     it('should have a correct title', () => {
         const actual = $(pageRegisterSelectors.h1).getText();
-        const expected = page.h1;
+        const expected = registerPage.h1;
         expect(actual).equal(expected);
     });
 
     it('should have a correct description', () => {
         const actual = $(pageRegisterSelectors.description).getText();
-        const expected = page.description;
+        const expected = registerPage.description;
         expect(actual).equal(expected);
     });
 
     it('should have a correct submit button test', () => {
         const actual = $(pageRegisterSelectors.submitButton).getText();
-        const expected = page.buttonText;
+        const expected = registerPage.buttonText;
         expect(actual).equal(expected);
     });
 
@@ -75,7 +76,7 @@ describe('Register page', () => {
     });
 });
 
-describe('Login Page', () =>{
+describe('LOGIN PAGE', () =>{
     it('should fill up email field', () => {
         const element = $(pageRegisterSelectors.emailInput);
         element.setValue(user.email);

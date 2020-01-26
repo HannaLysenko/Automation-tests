@@ -1,7 +1,3 @@
-const HOST = 'https://stage.pasv.us';
-const URL_REGISTER = `${HOST}/user/register`;
-const URL_LOGIN = `${HOST}/user/login`;
-
 const user = {
     firstName: "John",
     lastName: 'Smith',
@@ -13,7 +9,7 @@ const user = {
     englishLevel: 'Native'
 };
 
-const page = {
+const registerPage = {
     title: 'Progress Monitor',
     h1: 'User Register',
     description: 'Profiles with fictitious or dummy data will be deleted.',
@@ -39,4 +35,4 @@ const pageLogin = {
     h1: 'You are a new user'
 };
 
-module.exports = {URL_REGISTER, URL_LOGIN, user, page, pageRegisterSelectors, pageLogin};
+module.exports = { user, registerPage: registerPage, pageRegisterSelectors, pageLogin};
