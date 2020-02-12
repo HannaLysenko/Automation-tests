@@ -9,7 +9,7 @@ exports.config = {
     runner: 'local',
     //
     // Override default path ('/wd/hub') for chromedriver service.
-    path: '/',
+    path: 'C:/work2/chromedriver.exe',
     //
     // ==================
     // Specify Test Files

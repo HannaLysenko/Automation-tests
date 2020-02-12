@@ -13,7 +13,7 @@ describe('CREATE DAY REPORT', () => {
 
      it('should have a correct title', () => {
          const actual = $(pageRegisterSelectors.h1).getText();
-         const expected = loginPage.h1;
+         const expected = "Hanna Lysenko";
          expect(actual).equal(expected);
          browser.pause(1000);
      });
@@ -26,7 +26,7 @@ describe('CREATE DAY REPORT', () => {
 
     it('should have a correct title ', () => {
         const actual = $(pageRegisterSelectors.h1).getText();
-        const expected = $(diaryPage.h1);
+        const expected = "Daily reports";
         expect(actual).equals(expected);
         browser.pause(3000);
     });
@@ -39,7 +39,7 @@ describe('CREATE DAY REPORT', () => {
 
     it('should have a correct title  ', () => {
         const actual = $(pageRegisterSelectors.h1).getText();
-        const expected = $(diaryPage.h2);
+        const expected = "Create day report";
         expect(actual).equals(expected);
         browser.pause(3000);
     });
