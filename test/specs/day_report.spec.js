@@ -43,6 +43,6 @@ describe('CREATE DAY REPORT', () => {
         expect(actual).equals(expected);
         browser.pause(3000);
     });
-})
+});
 
 
