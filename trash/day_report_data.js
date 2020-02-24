@@ -4,8 +4,8 @@ const diaryPage = {
 }
 
 const pageDiarySelectors = {
-    diaryButton: 'a[qa="diary-link"]',
-    createDayReport: 'a[qa="create-day-report-button"]'
+    diaryButton: '//a[@qa="diary-link"]',
+    createDayReport: '//a[@qa="create-day-report-button"]'
 }
 
 

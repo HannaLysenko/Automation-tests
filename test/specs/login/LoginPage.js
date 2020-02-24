@@ -20,7 +20,11 @@ class LoginPage extends Page{
     }
 
     login(){
-
+        this.open();
+        this.email.setValue('hannatkach92@gmail.com');
+        this.password.setValue("11111");
+        this.submitBtn.click();
+        browser.pause(5000);
     }
 
     open(){

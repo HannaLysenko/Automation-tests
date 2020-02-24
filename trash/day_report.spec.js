@@ -2,13 +2,11 @@ const { expect } = require('chai');
 const { pageRegisterSelectors } = require('./register_data');
 const { URL_LOGIN, loginUser, loginPage, URL_DIARY } = require('./login_data');
 const {diaryPage, pageDiarySelectors} = require('./day_report_data');
+import {loginAsAdmin} from './action';
+
 describe('CREATE DAY REPORT', () => {
-    it('Login as admin', () => {
-        browser.url(URL_LOGIN);
-        $(pageRegisterSelectors.emailInput).setValue(loginUser.email);
-        $(pageRegisterSelectors.passwordInput).setValue(loginUser.password);
-        $(pageRegisterSelectors.submitButton).click();
-        browser.pause(1000);
+    before('Login as admin', () => {
+        loginAsAdmin();
     });
 
      it('should have a correct title', () => {
@@ -22,7 +20,7 @@ describe('CREATE DAY REPORT', () => {
         const element = $(pageDiarySelectors.diaryButton);
         element.click();
         browser.pause(3000);
-    })
+    });
 
     it('should have a correct title ', () => {
         const actual = $(pageRegisterSelectors.h1).getText();
