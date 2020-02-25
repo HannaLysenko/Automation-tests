@@ -9,4 +9,22 @@ function loginAsAdmin(){
     browser.pause(1000);
 }
 
-module.exports = {loginAsAdmin};
+function filloutReport (){
+    $('//input[@id="input-0"]').click();
+    $('//input[@id="input-1"]').click();
+    $('//input[@id="input-2"]').click();
+    $('//input[@id="input-3"]').click();
+    $('//input[@id="input-4"]').click();
+    $('//input[@id="input-5"]').click();
+    $('//input[@id="input-6"]').click();
+    $('//input[@id="input-7"]').click();
+    $('//input[@id="input-8"]').click();
+    $('//input[@id="input-9"]').click();
+    $('//input[@id="input-10"]').click();
+    $('//input[@id="input-11"]').click();
+    $('//select[@name="morale"]').selectByVisibleText('8');
+    $('//input[@name="hours"]').setValue('5');
+    $('//textarea[@name="description"]').setValue('Worked with my project. Attended lecture. Fixed homework');
+}
+
+module.exports = {loginAsAdmin, filloutReport}
