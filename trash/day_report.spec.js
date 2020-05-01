@@ -53,9 +53,6 @@ describe('CREATE DAY REPORT', () => {
         $('//button[@type="submit"]').click();
     })
 
-    // it('should check created day report', () =>{
-    //
-    // })
 });
 
 
